@@ -8,7 +8,7 @@ const OperatorButton = props => {
 			<button
 				className="btn"
 				id={props.operator.id}
-				onClick={() => props.clickHandler(props.operator.char)}
+				onClick={() => props.clickHandler(props.operator.value)}
 			>
 				{props.operator.char}
 			</button>

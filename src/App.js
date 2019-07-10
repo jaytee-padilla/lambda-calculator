@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import "./App.scss";
+import {evaluate} from "mathjs";
 // STEP 4 - import the button and display components
 // Don't forget to import any extra css/scss files you build into the correct component
-
 // Logo has already been provided for you. Do the same for the remaining components
 import Logo from "./components/DisplayComponents/Logo";
 import Numbers from './components/ButtonComponents/NumberButtons/Numbers';
@@ -19,7 +19,13 @@ function App() {
 	const [calcValue, setValue] = useState('0');
 
 	const clickHandler = btnClicked => {
-		btnClicked === 'C' ? setValue('0') : setValue(calcValue + btnClicked)
+		// btnClicked === 'C' ? setValue('0') : btnClicked === '=' ?
+		// console.log('equal sign clicked') : setValue(calcValue + btnClicked);
+
+		btnClicked === 'C' ? setValue('0') :
+		btnClicked === '=' ? setValue(evaluate(calcValue)) :
+		calcValue === '0' ? setValue(btnClicked) :
+		setValue(calcValue + btnClicked);
 	}
 
   return (
