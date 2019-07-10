@@ -8,6 +8,7 @@ const SpecialButton = props => {
 			<button
 				className="btn"
 				id={props.special.id}
+				onClick={() => props.special.char === 'C' && props.clickHandler(props.special.char)}
 			>
 				{props.special.char}
 			</button>
