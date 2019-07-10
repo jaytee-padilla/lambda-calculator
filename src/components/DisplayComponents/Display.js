@@ -4,7 +4,7 @@ import './Display.scss';
 const Display = props => {
   return (
 		<div className="display-container">
-			<input className="display" type="text" value="" disabled />
+			<input className="display" type="text" value="" maxlength="14" disabled />
 		</div>
 	)
 };
