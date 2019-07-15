@@ -1,0 +1,63 @@
+// CSS Reset
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.container {
+	width: 400px;
+	height: 650px;
+	border-radius: 10px;
+	border: 1px solid grey;
+	background: #BB1233;
+
+	.App {
+		width: 90%;
+		height: 100%;
+		margin: 0 auto;
+	}
+
+	.calc-buttons-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		justify-items: center;
+		height: 425px;
+		margin-top: 25px;
+
+		#division-operator {
+			grid-row: 1 / 2;
+			grid-column: 4 / 5;
+		}
+
+		#multiplication-operator {
+			grid-row: 2 / 3;
+			grid-column: 4 / 5;
+		}
+
+		#subtraction-operator {
+			grid-row: 3 / 4;
+			grid-column: 4 / 5;
+		}
+		
+		#addition-operator {
+			grid-row: 4 / 5;
+			grid-column: 4 / 5;
+		}
+
+		#equals-operator {
+			grid-row: 5 / 6;
+			grid-column: 4 / 5;
+		}
+
+		#btn-0 {
+			width: 100%;
+			grid-column: 1 / 3;
+		}
+	}
+}
